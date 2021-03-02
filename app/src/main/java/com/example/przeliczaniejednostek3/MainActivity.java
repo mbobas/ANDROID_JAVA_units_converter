@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
         nameEdit = findViewById(R.id.nameEdit);
         buttonGo = findViewById(R.id.buttonGo);
-        
 
         buttonGo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,9 +32,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         
-    }
-
-    private void GoToActivityB() {
-
     }
 }
