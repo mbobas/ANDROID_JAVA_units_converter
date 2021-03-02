@@ -12,6 +12,7 @@ public class ActivityB extends AppCompatActivity {
 
     public TextView welcome2, nameTextView;
     private double cale;
+    public String optionNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +20,12 @@ public class ActivityB extends AppCompatActivity {
         setContentView(R.layout.activity_b);
 
         nameTextView = findViewById(R.id.nameTextView);
-        Intent i = getIntent();
-        String name = i.getStringExtra("name");
 
-        nameTextView.setText("" + name);
+        //taking a passed option
+        Intent i = getIntent();
+        optionNumber = i.getStringExtra("optionNumber");
+
+        nameTextView.setText("" + optionNumber);
 
         TextView textViewGora = findViewById(R.id.textView2);
         textViewGora.setVisibility(View.INVISIBLE);
@@ -35,7 +38,6 @@ public class ActivityB extends AppCompatActivity {
             textViewDol.setVisibility(View.VISIBLE);
             textViewDol.setText("" + cale);
         }
-
     }
 
     @Override
@@ -54,8 +56,14 @@ public class ActivityB extends AppCompatActivity {
         TextView textViewDol = findViewById(R.id.textView3);
         textViewDol.setVisibility(View.VISIBLE);
 
-        cale = 0.39 * cm;
-        textViewDol.setText("" + cale);
+        if (optionNumber.equals("0") ) {
+            cale = 0.39 * cm;
+            textViewDol.setText("CM/M " + cale);
+        }
+        if (optionNumber.equals("1")) {
+            cale = 0.5 * cm;
+            textViewDol.setText("CM/K " + cale);
+        }
     }
 
 }
