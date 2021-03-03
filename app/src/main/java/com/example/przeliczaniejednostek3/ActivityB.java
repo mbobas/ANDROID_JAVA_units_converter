@@ -199,6 +199,160 @@ public class ActivityB extends AppCompatActivity {
             score = 0.00019 * value;
             wynik.setText("" + score);
         }
+        //SPEED - PREDKOSCI
+//                "km/s na km/h",
+//                "km/s na m/s",
+//                "km/s na mile/h",
+//                "km/s na węzły",
+//                "km/s na machy",
+        if (optionNumber.equals("km/s na km/h")) {
+            score = 3600.0 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("km/s na m/s")) {
+            score = 1000.0 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("km/s na mile/h")) {
+            score = 2236.93629 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("km/s na węzły")) {
+            score = 1943.84449 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("km/s na machy")) {
+            score = 2.93858 * value;
+            wynik.setText("" + score);
+        }
 
+//
+//                "km/h na km/s",
+//                "km/h na m/s",
+//                "km/h na mile/h",
+//                "km/h na węzły",
+//                "km/h na machy",
+//
+        if (optionNumber.equals("km/h na km/s")) {
+            score = 0.00028 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("km/h na mile/h")) {
+            score = 0.62137 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("km/h na węzły")) {
+            score = 0.53996 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("km/h na m/s")) {
+            score = 0.27778 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("km/h na machy")) {
+            score = 0.00082 * value;
+            wynik.setText("" + score);
+        }
+//                "m/s na km/s",
+//                "m/s na km/h",
+//                "m/s na mile/h",
+//                "m/s na węzły",
+//                "m/s na machy",
+//
+        if (optionNumber.equals("m/s na km/s")) {
+            score = 0.00100 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("m/s na km/h")) {
+            score = 3.60000 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("m/s na mile/h")) {
+            score = 2.23694 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("m/s na węzły")) {
+            score = 1.94384 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("m/s na machy")) {
+            score = 0.00294 * value;
+            wynik.setText("" + score);
+        }
+//                "mile/s na km/h",
+//                "mile/h na m/s",
+//                "mile/h na km/s",
+//                "mile/h na węzły",
+//                "mile/h na machy",
+        if (optionNumber.equals("mile/s na km/h")) {
+            score = 1.60934 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("mile/h na m/s")) {
+            score = 0.44704 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("mile/h na km/s")) {
+            score = 0.00045 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("mile/h na węzły")) {
+            score = 0.86898 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("mile/h na machy")) {
+            score = 0.00131 * value;
+            wynik.setText("" + score);
+        }
+//                "węzły na km/h",
+//                "węzły na m/s",
+//                "węzły na km/s",
+//                "węzły na mile/h",
+//                "węzły na machy",
+        if (optionNumber.equals("węzły na km/h")) {
+            score = 1.85200 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("węzły na m/s")) {
+            score = 0.51444 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("węzły na km/s")) {
+            score = 0.00051 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("węzły na mile/h")) {
+            score = 1.15078 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("węzły na machy")) {
+            score = 0.00151 * value;
+            wynik.setText("" + score);
+        }
+//                "machy na km/h",
+//                "machy na m/s",
+//                "machy na km/s",
+//                "machy na węzły",
+//                "machy na mile/h",
+        if (optionNumber.equals("machy na km/h")) {
+            score = 1225.08000 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("machy na m/s")) {
+            score = 340.30000 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("machy na km/s")) {
+            score = 0.34030 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("machy na mile/h")) {
+            score = 761.22942 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("machy na machy")) {
+            score = 0.00151 * value;
+            wynik.setText("" + score);
+        }
     }
 }

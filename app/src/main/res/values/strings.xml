@@ -4,7 +4,7 @@
     <string name="go">GO</string>
     <string name="welcome2">Witaj w UnitCoverter </string>
     <string name="wybierz"></string>
-    <string name="choose_option">Proszę wybierz opcję do przeliczenia</string>
+    <string name="choose_option">Wybierz opcję do przeliczenia</string>
     <string name="speed">Prędkosci</string>
     <string name="length">Długosci</string>
     <string name="weight">Masa</string>
