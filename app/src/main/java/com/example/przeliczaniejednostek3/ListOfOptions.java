@@ -8,18 +8,34 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ListOfOptions extends AppCompatActivity {
 
-    ListView listView;
-
+    public ListView listView, lisetView2, listView3;
+    public TextView nameTextView;
+    public String name;
+    public String optionString;
     //Data to be desplayed int a list
-    String[] typesOfCalculation = {
-            "CM/M", "CM/KM", "KM/M", "KM/CM"
+    String[] typesOfCalculationLength= {
+            "CM/M", "CM/KM", "CM/CAL", "CM/STOPY", "CM/MILE",
+            "M/CM", "M/KM", "M/CAL", "M/STOPY", "M/MILE",
+            "KM/CM", "KM/M", "KM/CAL", "KM/STOPY", "KM/MILE",
+            "MILE/KM", "MILE/CM", "MILE/STOPY", "MILE/CALE",
+            "CAL/CM", "CAL/M", "CAL/KM", "CAL/STOPY", "CALE/MILE",
+            "STOPA/CM", "STOPA/CAL", "STOPA/M", "STOPA/KM", "STOPA/MILE"
     };
 
-    public String optionString;
+    String[] typesOfCalculationSpeed = {
+            "CM/M", "CM/KM", "CM/CAL", "CM/STOPY", "CM/MILE",
+            "M/CM", "M/KM", "M/CAL", "M/STOPY", "M/MILE",
+            "KM/CM", "KM/M", "KM/CAL", "KM/STOPY", "KM/MILE",
+            "MILE/KM", "MILE/CM", "MILE/STOPY", "MILE/CALE",
+            "CAL/CM", "CAL/M", "CAL/KM", "CAL/STOPY", "CALE/MILE",
+            "STOPA/CM", "STOPA/CAL", "STOPA/M", "STOPA/KM", "STOPA/MILE"
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +48,7 @@ public class ListOfOptions extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_1,
-                typesOfCalculation
+                typesOfCalculationLength
         );
 
         listView.setAdapter(adapter);
@@ -41,9 +57,9 @@ public class ListOfOptions extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(ListOfOptions.this, "Wybrano " + typesOfCalculation[position], Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListOfOptions.this, "Wybrano " + typesOfCalculationLength[position], Toast.LENGTH_SHORT).show();
 
-                optionString = String.valueOf(position);
+                optionString = String.valueOf(typesOfCalculationLength[position]);
                 Intent i = new Intent(getApplicationContext(), ActivityB.class);
                 i.putExtra("optionNumber", optionString);
                 //i.putExtra("optionName", optionString);
@@ -51,6 +67,10 @@ public class ListOfOptions extends AppCompatActivity {
             }
         });
 
-
+        //taking a passed option
+        nameTextView = findViewById(R.id.welcome2);
+        Intent i = getIntent();
+        name = i.getStringExtra("name");
+        nameTextView.setText("Witaj w UnitConverter " + name);
     }
 }

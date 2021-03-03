@@ -1,6 +1,13 @@
 <resources>
-    <string name="app_name">PrzeliczanieJednostek3</string>
-    <string name="welcome">WELCOME</string>
+    <string name="app_name">Unit Converter</string>
+    <string name="welcome">Witaj</string>
     <string name="go">GO</string>
-    <string name="welcome2">WELCOME IN APP</string>
+    <string name="welcome2">Witaj w UnitCoverter </string>
+    <string name="wybierz"></string>
+    <string name="choose_option">Proszę wybierz opcję do przeliczenia</string>
+    <string name="speed">Prędkosci</string>
+    <string name="length">Długosci</string>
+    <string name="weight">Masa</string>
+    <string name="wartosc">Wpisz wartość</string>
+    <string name="but_wynik">WYNIK</string>
 </resources>
