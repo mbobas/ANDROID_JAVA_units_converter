@@ -70,7 +70,11 @@ public class ListOfOptions extends AppCompatActivity {
     };
 
     String[] typesOfCalculationWeight = {
-            "SPEED","SPEED","SPEED","SPEED","SPEED"
+            "kg/funt", "kg/uncja", "kg/tona", "kg/karat",
+            "funt/kg", "funt/uncja", "funt/tona", "funt/karat",
+            "uncja/kg", "uncja/funt", "uncja/tona", "uncja/karat",
+            "tona/kg", "tona/funt", "tona/uncja", "tona/karat",
+            "karat/kg", "karat/funt", "karat/uncja", "karat/tona",
     };
 
 

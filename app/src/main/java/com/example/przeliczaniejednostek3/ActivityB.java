@@ -11,17 +11,17 @@ import android.widget.TextView;
 
 public class ActivityB extends AppCompatActivity {
 
-    public TextView optionNametextView, optionNametextView2, wynik;
+    public TextView optionNametextView, optionNametextView2, wynik, textView;
     public EditText editText;
     private double score;
     public String optionNumber;
-    public Button backButton;
+    public String[] optionsString;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b);
-
 
         //taking a passed option
         optionNametextView = findViewById(R.id.optionName);
@@ -29,6 +29,11 @@ public class ActivityB extends AppCompatActivity {
         optionNumber = i.getStringExtra("optionNumber");
         //setting a header with choosen option
         optionNametextView.setText("" + optionNumber);
+
+        //setting a textView - np. "Podaj kg"
+        textView = findViewById(R.id.textView);
+        optionsString = optionNumber.split("/");
+        textView.setText("Podaj wartość w " + optionsString[0] );
 
         //setting a header2 name with choosen option
         optionNametextView2 = findViewById(R.id.optionName2);
@@ -42,7 +47,7 @@ public class ActivityB extends AppCompatActivity {
 
         //taking a data after screen was rotated, holding a data from past.
         if (savedInstanceState != null) {
-            score = savedInstanceState.getDouble("cale");
+            score = savedInstanceState.getDouble("score");
             wynik.setVisibility(View.VISIBLE);
             wynik.setText("" + score);
         }
@@ -54,7 +59,7 @@ public class ActivityB extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putDouble("cale", score);
+        outState.putDouble("score", score);
     }
 
 
@@ -354,5 +359,93 @@ public class ActivityB extends AppCompatActivity {
             score = 0.00151 * value;
             wynik.setText("" + score);
         }
+//         "kg/funt", "kg/uncja", "kg/tona", "kg/karat",
+        if (optionNumber.equals("kg/funt")) {
+            score = 2.20462 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("kg/uncja")) {
+            score = 35.27396 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("kg/tona")) {
+            score = 0.001 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("kg/karat")) {
+            score = 5000.0 * value;
+            wynik.setText("" + score);
+        }
+
+//        "funt/kg", "funt/uncja", "funt/tona", "funt/karat",
+        if (optionNumber.equals("funt/kg")) {
+            score = 0.45359 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("funt/uncja")) {
+            score = 16.00000 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("funt/tona")) {
+            score = 0.00045 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("funt/karat")) {
+            score = 2267.96185 * value;
+            wynik.setText("" + score);
+        }
+//        "uncja/kg", "uncja/funt", "uncja/tona", "uncja/karat",
+        if (optionNumber.equals("uncja/kg")) {
+            score = 0.02835 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("uncja/funt")) {
+            score = 0.06250 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("uncja/tona")) {
+            score = 0.00003 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("uncja/karat")) {
+            score = 141.74762 * value;
+            wynik.setText("" + score);
+        }
+//        "tona/kg", "tona/funt", "tona/uncja", "tona/karat",
+        if (optionNumber.equals("tona/kg")) {
+            score = 1000 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("tona/funt")) {
+            score = 2204.62262 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("tona/uncja")) {
+            score = 35273.96195 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("tona/karat")) {
+            score = 5000000.0 * value;
+            wynik.setText("" + score);
+        }
+//        "karat/kg", "karat/funt", "karat/uncja", "karat/tona",
+        if (optionNumber.equals("karat/kg")) {
+            score = 0.00020 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("karat/funt")) {
+            score = 0.00044 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("karat/uncja")) {
+            score = 0.00705 * value;
+            wynik.setText("" + score);
+        }
+        if (optionNumber.equals("karat/tona")) {
+            score = 0.0000002 * value;
+            wynik.setText("" + score);
+        }
+
+
     }
 }
